@@ -32,3 +32,35 @@ cd ~/Documents/hello_world_repo
 touch hello_world.cpp
 nano hello_world.cpp
 ```
+[hello_world.cpp](hello_world.cpp)
+4)Добавьте этот файл в локальную копию репозитория.
+```
+git add hello_world.cpp
+```
+5)Закоммитьте изменения с осмысленным сообщением.
+```
+git commit -m "Add hello_world.cpp with bad code style"
+>>[master acc580f] Add hello_world.cpp with bad code style
+ 1 file changed, 7 insertions(+)
+ create mode 100644 hello_world_repo/hello_world.cpp
+```
+6,7)Изменитьте исходный код так, чтобы программа через стандартный поток ввода запрашивалось имя пользователя. А в стандартный поток вывода печаталось сообщение Hello world from @name, где @name имя пользователя.Закоммитьте новую версию программы. Почему не надо добавлять файл повторно git add?
+```
+git commit -am "Update hello_world.cpp to ask for user's name"
+>>[master 5aa4647] Update hello_world.cpp to ask for user's name
+ 1 file changed, 5 insertions(+), 1 deletion(-)
+```
+Флаг -a автоматически добавляет изменения в уже отслеживаемых файлах, поэтому git add не требуется.
+8)Запуште изменения в удалёный репозиторий.
+```
+git push origin master
+>>Enumerating objects: 9, done.
+Counting objects: 100% (9/9), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (8/8), 948 bytes | 948.00 KiB/s, done.
+Total 8 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/Ekaterina416b/MyRepository.git
+   3c5a746..5aa4647  master -> master
+```
+9)
