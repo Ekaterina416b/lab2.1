@@ -2,9 +2,10 @@
 <details>
  <summary>Part1</summary>
  <p>
-1)Создайте пустой репозиторий на сервисе github.com (или gitlab.com, или bitbucket.com).
-2)Выполните инструкцию по созданию первого коммита на странице репозитория, созданного на предыдещем шаге.
-```
+1)Создайте пустой репозиторий на сервисе github.com (или gitlab.com, или bitbucket.com). 
+
+2)Выполните инструкцию по созданию первого коммита на странице репозитория, созданного на предыдещем шаге. 
+``` 
 echo "# MyRepository" >> README.md
 git init
 >>Reinitialized existing Git repository in /Users/makbuk/Documents/.git/
@@ -70,10 +71,8 @@ To https://github.com/Ekaterina416b/MyRepository.git
 <img width="1280" alt="1 9  scrin" src="https://github.com/user-attachments/assets/0394ce4c-5018-43c7-ad67-85f5178bffaf" />
 [Ссылка на коммиты](https://github.com/Ekaterina416b/MyRepository/commits/master/)
  </p>
- </p>
 </details>
-<details>
- <summary>Part2</summary>
+ 
  1)В локальной копии репозитория создайте локальную ветку patch1.
  ```
  MyRepository % git checkout -b patch1
@@ -91,8 +90,7 @@ To https://github.com/Ekaterina416b/MyRepository.git
  1 file changed, 10 insertions(+)
  create mode 100644 MyRepository/hello_world.cpp
 git push origin patch1
->>Enumerating objects: 5, done.
-Counting objects: 100% (5/5), done.
+>>Enumerating objects: 5, done.Counting objects: 100% (5/5), done.
 Delta compression using up to 8 threads
 Compressing objects: 100% (3/3), done.
 Writing objects: 100% (4/4), 539 bytes | 539.00 KiB/s, done.
@@ -103,7 +101,100 @@ remote:      https://github.com/Ekaterina416b/MyRepository/pull/new/patch1
 remote: 
 To https://github.com/Ekaterina416b/MyRepository.git
  * [new branch]      patch1 -> patch1
- 4)Проверьте, что ветка patch1 доступна в удалёный репозитории.
+```
+ 4)Проверьте, что ветка patch1 доступна в удалёный репозитории. 
  
- [Ссылка на ветку](https://github.com/Ekaterina416b/MyRepository/commits/patch1/)
+ [Ссылка на ветку](https://github.com/Ekaterina416b/MyRepository/commits/patch1/) 
+ 
  5)Создайте pull-request patch1 -> master.
+ <img width="1012" alt="2 5 scrin" src="https://github.com/user-attachments/assets/e40974c2-52f5-46eb-bccf-3cef1fb97909" />
+6)В локальной копии в ветке patch1 добавьте в исходный код комментарии.
+```
+git checkout patch1
+nano hello_world.cpp
+```
+7)commit, push.
+```
+git add hello_world.cpp
+git commit -m "Add comments to the code"
+>>[patch1 21df999] Add comments to the code
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+git push origin patch1
+>>Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (4/4), 441 bytes | 441.00 KiB/s, done.
+Total 4 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/Ekaterina416b/MyRepository.git
+   84e9612..21df999  patch1 -> patch1
+```
+8)Проверьте, что новые изменения есть в созданном на шаге 5 pull-request
+<img width="925" alt="2 8 scrin" src="https://github.com/user-attachments/assets/9af0a760-ff02-419f-88be-52abc9a6bbf7" />
+9) В удалённый репозитории выполните слияние PR patch1 -> master и удалите ветку patch1 в удаленном репозитории.
+<img width="937" alt="2 9 scrin" src="https://github.com/user-attachments/assets/ee395c45-4480-466a-ad53-552a0cae6edf" />
+После удаления ветки
+<img width="927" alt=" 2 12 scrin" src="https://github.com/user-attachments/assets/f4f8d618-9d9b-485d-a3db-5f2791daecdf" />
+10) Локально выполните pull.
+```
+git checkout master
+>>D	hello_world_repo/hello_world.cpp
+Switched to branch 'master'
+Your branch is up to date with 'origin/master'.
+git pull origin master              
+>>remote: Enumerating objects: 1, done.
+remote: Counting objects: 100% (1/1), done.
+remote: Total 1 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+Unpacking objects: 100% (1/1), 922 bytes | 461.00 KiB/s, done.
+From https://github.com/Ekaterina416b/MyRepository
+ * branch            master     -> FETCH_HEAD
+   5aa4647..5634f13  master     -> origin/master
+Updating 5aa4647..5634f13
+Fast-forward
+ MyRepository/hello_world.cpp | 10 ++++++++++
+ 1 file changed, 10 insertions(+)
+ create mode 100644 MyRepository/hello_world.cpp
+```
+11)С помощью команды git log просмотрите историю в локальной версии ветки master.
+```
+git log
+commit 5634f13634199d6769f1dc8f56cfa04959bc81a4 (HEAD -> master, origin/master)
+Merge: 5aa4647 21df999
+Author: Ekaterina <karpina.katia@gmail.com>
+Date:   Fri Mar 14 12:49:12 2025 +0300
+
+    Merge pull request #1 from Ekaterina416b/patch1
+    
+    Remove using namespace std; and improve code style
+
+commit 21df999f954c422e41b7dc8d40eea67eb776cb89 (origin/patch1, patch1)
+Author: Ekaterina Karpina <karpina.katia@gmail.com>
+Date:   Fri Mar 14 12:23:09 2025 +0300
+
+    Add comments to the code
+
+commit 84e961218ab2b42fa64a3fb6705ddfd88a7d22cb
+Author: Ekaterina Karpina <karpina.katia@gmail.com>
+Date:   Fri Mar 14 10:33:08 2025 +0300
+
+    Remove using namespace std; and improve code style
+
+commit 5aa46472c27c587c9f56b5b6906d8e23cbc105f9
+Author: Ekaterina Karpina <karpina.katia@gmail.com>
+Date:   Fri Mar 14 02:03:29 2025 +0300
+
+    Update hello_world.cpp to ask for user's name
+
+commit acc580fce947f1098de5bb6b8a7e19190581bc47
+Author: Ekaterina Karpina <karpina.katia@gmail.com>
+Date:   Fri Mar 14 01:40:46 2025 +0300
+
+    Add hello_world.cpp with bad code style
+
+commit 3c5a746ac5523df14be794a349e62836fe8fd52f
+Author: Ekaterina Karpina <karpina.katia@gmail.com>
+Date:   Thu Mar 13 23:59:29 2025 +0300
+
+    first commit
+
