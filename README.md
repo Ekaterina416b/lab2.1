@@ -64,5 +64,5 @@ To https://github.com/Ekaterina416b/MyRepository.git
    3c5a746..5aa4647  master -> master
 ```
 9)Проверьте, что история коммитов доступна в удалёный репозитории.
-```
-[1.9 scrin](https://github.com/Ekaterina416b/lab2.1/raw/master/1.9%20scrin.png)
+<img width="1280" alt="1 9  scrin" src="https://github.com/user-attachments/assets/0394ce4c-5018-43c7-ad67-85f5178bffaf" />
+[Ссылка на коммиты](https://github.com/Ekaterina416b/MyRepository/commits/master/)
