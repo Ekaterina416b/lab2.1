@@ -161,5 +161,9 @@ Fast-forward
 git log
 ```
 [task2.11.txt](https://github.com/Ekaterina416b/lab2.1/blob/master/task2.11.txt)
-
+12)Удалите локальную ветку patch1.
+```
+git branch -d patch1
+>>Deleted branch patch1 (was 21df999).
+```
 
