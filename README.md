@@ -28,7 +28,7 @@ makbuk@MacBook-Air-makbuk Documents %
 ```
 3)Создайте файл hello_world.cpp в локальной копии репозитория (который должен был появиться на шаге 2). Реализуйте программу Hello world на языке C++ используя плохой стиль кода. Например, после заголовочных файлов вставьте строку using namespace std;.
 ```
-cd ~/Documents/hello_world_repo
+cd ~/Documents/MyRepository
 touch hello_world.cpp
 nano hello_world.cpp
 ```
@@ -42,7 +42,7 @@ git add hello_world.cpp
 git commit -m "Add hello_world.cpp with bad code style"
 >>[master acc580f] Add hello_world.cpp with bad code style
  1 file changed, 7 insertions(+)
- create mode 100644 hello_world_repo/hello_world.cpp
+ create mode 100644 MyRepository/hello_world.cpp
 ```
 6,7)Изменитьте исходный код так, чтобы программа через стандартный поток ввода запрашивалось имя пользователя. А в стандартный поток вывода печаталось сообщение Hello world from @name, где @name имя пользователя.Закоммитьте новую версию программы. Почему не надо добавлять файл повторно git add?
 ```
