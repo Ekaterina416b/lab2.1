@@ -1,4 +1,7 @@
 # lab2.1
+<details>
+ <summary>Part1</summary>
+ <p>
 1)Создайте пустой репозиторий на сервисе github.com (или gitlab.com, или bitbucket.com).
 2)Выполните инструкцию по созданию первого коммита на странице репозитория, созданного на предыдещем шаге.
 ```
@@ -66,3 +69,41 @@ To https://github.com/Ekaterina416b/MyRepository.git
 9)Проверьте, что история коммитов доступна в удалёный репозитории.
 <img width="1280" alt="1 9  scrin" src="https://github.com/user-attachments/assets/0394ce4c-5018-43c7-ad67-85f5178bffaf" />
 [Ссылка на коммиты](https://github.com/Ekaterina416b/MyRepository/commits/master/)
+ </p>
+ </p>
+</details>
+<details>
+ <summary>Part2</summary>
+ 1)В локальной копии репозитория создайте локальную ветку patch1.
+ ```
+ MyRepository % git checkout -b patch1
+ >>Switched to a new branch 'patch1'
+ ```
+ 2)Внесите изменения в ветке patch1 по исправлению кода и избавления от using namespace std;.
+ ```
+ MyRepository % nano hello_world.cpp
+ ```
+ 3)commit, push локальную ветку в удалённый репозиторий.
+ ```
+ git add hello_world.cpp
+ git commit -m "Remove using namespace std; and improve code style"
+>>[patch1 84e9612] Remove using namespace std; and improve code style
+ 1 file changed, 10 insertions(+)
+ create mode 100644 MyRepository/hello_world.cpp
+git push origin patch1
+>>Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (4/4), 539 bytes | 539.00 KiB/s, done.
+Total 4 (delta 0), reused 0 (delta 0), pack-reused 0
+remote: 
+remote: Create a pull request for 'patch1' on GitHub by visiting:
+remote:      https://github.com/Ekaterina416b/MyRepository/pull/new/patch1
+remote: 
+To https://github.com/Ekaterina416b/MyRepository.git
+ * [new branch]      patch1 -> patch1
+ 4)Проверьте, что ветка patch1 доступна в удалёный репозитории.
+ 
+ [Ссылка на ветку](https://github.com/Ekaterina416b/MyRepository/commits/patch1/)
+ 5)Создайте pull-request patch1 -> master.
