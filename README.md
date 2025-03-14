@@ -63,4 +63,6 @@ Total 8 (delta 0), reused 0 (delta 0), pack-reused 0
 To https://github.com/Ekaterina416b/MyRepository.git
    3c5a746..5aa4647  master -> master
 ```
-9)
+9)Проверьте, что история коммитов доступна в удалёный репозитории.
+```
+[1.9 scrin](https://1.9 scrin.png)
