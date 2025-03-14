@@ -159,42 +159,7 @@ Fast-forward
 11)С помощью команды git log просмотрите историю в локальной версии ветки master.
 ```
 git log
-commit 5634f13634199d6769f1dc8f56cfa04959bc81a4 (HEAD -> master, origin/master)
-Merge: 5aa4647 21df999
-Author: Ekaterina <karpina.katia@gmail.com>
-Date:   Fri Mar 14 12:49:12 2025 +0300
+```
+[task2.11.txt](https://github.com/Ekaterina416b/lab2.1/blob/master/task2.11.txt)
 
-    Merge pull request #1 from Ekaterina416b/patch1
-    
-    Remove using namespace std; and improve code style
-
-commit 21df999f954c422e41b7dc8d40eea67eb776cb89 (origin/patch1, patch1)
-Author: Ekaterina Karpina <karpina.katia@gmail.com>
-Date:   Fri Mar 14 12:23:09 2025 +0300
-
-    Add comments to the code
-
-commit 84e961218ab2b42fa64a3fb6705ddfd88a7d22cb
-Author: Ekaterina Karpina <karpina.katia@gmail.com>
-Date:   Fri Mar 14 10:33:08 2025 +0300
-
-    Remove using namespace std; and improve code style
-
-commit 5aa46472c27c587c9f56b5b6906d8e23cbc105f9
-Author: Ekaterina Karpina <karpina.katia@gmail.com>
-Date:   Fri Mar 14 02:03:29 2025 +0300
-
-    Update hello_world.cpp to ask for user's name
-
-commit acc580fce947f1098de5bb6b8a7e19190581bc47
-Author: Ekaterina Karpina <karpina.katia@gmail.com>
-Date:   Fri Mar 14 01:40:46 2025 +0300
-
-    Add hello_world.cpp with bad code style
-
-commit 3c5a746ac5523df14be794a349e62836fe8fd52f
-Author: Ekaterina Karpina <karpina.katia@gmail.com>
-Date:   Thu Mar 13 23:59:29 2025 +0300
-
-    first commit
 
